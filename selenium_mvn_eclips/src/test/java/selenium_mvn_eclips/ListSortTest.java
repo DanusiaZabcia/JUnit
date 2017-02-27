@@ -91,17 +91,22 @@ public class ListSortTest {
 	public void isSortingChDecentWorksAsSortMethod() {
 
 		Random mix = new Random();
-		ArrayList<Integer> list = new ArrayList<Integer>();
+		final ArrayList<Integer> list = new ArrayList<Integer>();
+		 ArrayList<Integer> list2 = new ArrayList<Integer>();
 		for (int i = 0; i < 30; i++) {
 			Integer a = mix.nextInt(200);
 			list.add(a);
+			
+			list2= list;
 		}
 		ListSort newlist = new ListSort(list);
-		ArrayList<Integer> list2 = new ArrayList<Integer>();
-		list2= list;
+		
 
 		//assertFalse(list.containsAll(newlist.sortByChoiceDecent())&&newlist.sortByChoiceDecent().containsAll(list));
 		//assertTrue( list.retainAll( newlist.sortByChoiceDecent()));
+		System.out.println(list);
+		System.out.println(newlist.sortByChoiceDecent());
+		System.out.println(list2);
 		assertThat(newlist.sortByChoiceDecent(),
 				IsIterableContainingInOrder.contains(list2.toArray()));
 	}

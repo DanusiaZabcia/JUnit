@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class ListSort {
 
-	ArrayList<Integer> list;
+	private ArrayList<Integer> list;
 
 	public ListSort(ArrayList<Integer> list) {
 
