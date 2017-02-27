@@ -40,7 +40,26 @@ public class ListSort {
 				for (int j = i + 1; j < list.size() - 1; j++) {
 					if (list.get(min) > list.get(j)) {
 						temp = list.get(min);
-						list.set(i, list.get(j));
+						list.set(min, list.get(j));
+						list.set(j, temp);
+					}
+				}
+			}
+		}
+		System.out.println(list);
+		return list;
+	}
+	public ArrayList<Integer> sortByChoiceDecent() {
+
+		if (list.size() > 0) {
+			Integer temp, min;
+
+			for (int i = 0; i < list.size() - 1; i++) {
+				min = i;
+				for (int j = i + 1; j < list.size() - 1; j++) {
+					if (list.get(min) < list.get(j)) {
+						temp = list.get(min);
+						list.set(min, list.get(j));
 						list.set(j, temp);
 					}
 				}
