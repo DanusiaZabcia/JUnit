@@ -44,7 +44,38 @@ public class ListSortTest {
 		
 
 	}
+	
+	@Test
+public void isSortingChoiceWorksAsSortMethod() {
 
+		
+		ArrayList<Integer> list = new ArrayList<Integer>();
+		ArrayList<Integer> list2 = new ArrayList<Integer>();
+		list.add(234);
+		list.add(4343);
+		list.add(43);
+		list.add(0);
+		list.add(455311);
+		list.add(-3);
+		list.add(8);
+		
+		list2.add(234);
+		list2.add(4343);
+		list2.add(43);
+		list2.add(0);
+		list2.add(455311);
+		list2.add(-3);
+		list2.add(8);
+		
+		ListSort newlist = new ListSort(list);
+
+		Collections.sort(list2);
+		System.out.println(list2);
+		System.out.println(newlist.sortByChoice());
+		assertThat(newlist.sortByChoice(),
+				IsIterableContainingInOrder.contains(list2.toArray()));
+		
+	}
 	/*@Test
 	public void isSortingBWorksWith0() {
 		ArrayList<Integer> list = new ArrayList<Integer>();
