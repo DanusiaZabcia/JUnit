@@ -50,14 +50,14 @@ public class ListSort {
 		
 		return list;
 	}
-	/*public ArrayList<Integer> sortByChoiceDecent() {
+	public ArrayList<Integer> sortByChoiceDecent() {
 
 		if (list.size() > 0) {
 			Integer temp, min;
 
 			for (int i = 0; i < list.size() - 1; i++) {
 				min = i;
-				for (int j = i + 1; j < list.size() - 1; j++) {
+				for (int j = i + 1; j <= list.size() - 1; j++) {
 					if (list.get(min) < list.get(j)) {
 						temp = list.get(min);
 						list.set(min, list.get(j));
@@ -68,5 +68,5 @@ public class ListSort {
 		}
 		
 		return list;
-	}*/
+	}
 }
