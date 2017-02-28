@@ -104,6 +104,7 @@ public class ListSortTest {
 		ListSort newlist = new ListSort(list);
 		// assertEquals(list2, newlist.bubbleSort());
 		// assertTrue( list.retainAll( newlist.bubbleSort()));
+		Collections.sort(list2);
 		System.out.println(list2);
 		System.out.println(newlist.bubbleSort());
 		assertThat(newlist.bubbleSort(), IsIterableContainingInOrder.contains(list2.toArray()));
