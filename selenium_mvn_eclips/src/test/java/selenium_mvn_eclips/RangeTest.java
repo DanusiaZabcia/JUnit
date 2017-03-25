@@ -11,7 +11,7 @@ public class RangeTest {
 	public void shouldSayIs15InRange()
 	{
 		Range range= new Range(10,20);
-	assertTrue("nie jest", range.isInRange(34));
+	assertTrue("nie jest", range.isInRange(12));
 		
 	}
 
