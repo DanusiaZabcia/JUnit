@@ -2,7 +2,7 @@ package selenium_mvn_eclips;
 
 import java.util.List;
 
-public class ListSortByChoice <T extends Comparable<T>> {
+public class ListSortByChoice <T extends Comparable<T>> implements SortList<T> {
 
 	private List<T> list;
 
@@ -13,7 +13,7 @@ public class ListSortByChoice <T extends Comparable<T>> {
 
 
 
-	public List<T> sortByChoice() {
+	public List<T> sortAsc() {
 
 			for (int i = 0; i <= list.size() - 1; i++) {
 				
@@ -30,7 +30,7 @@ public class ListSortByChoice <T extends Comparable<T>> {
 		
 		return list;
 	}
-	public List<T> sortByChoiceDecent() {
+	public List<T> sortDesc() {
 
 		
 

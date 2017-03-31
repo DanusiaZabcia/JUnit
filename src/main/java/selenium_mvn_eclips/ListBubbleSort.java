@@ -2,7 +2,7 @@ package selenium_mvn_eclips;
 
 import java.util.List;
 
-public class ListBubbleSort <T extends Comparable<T>> {
+public class ListBubbleSort <T extends Comparable<T>> implements SortList<T>{
 
 	private List<T> list;
 
@@ -11,7 +11,7 @@ public class ListBubbleSort <T extends Comparable<T>> {
 		this.list = list;
 	}
 
-	public 	List<T> bubbleSort() {
+	public 	List<T> sortAsc() {
 		
 			for (int w = 0; w < list.size()-1; w++) {
 				for (int i = 0; i < list.size()-1; i++) {
@@ -27,6 +27,13 @@ public class ListBubbleSort <T extends Comparable<T>> {
 		
 		return list;
 
+	}
+
+	@Override
+	public List<T> sortDesc() {
+		// TODO Auto-generated method stub
+		//return null;
+		throw new UnsupportedOperationException();
 	}
 
 

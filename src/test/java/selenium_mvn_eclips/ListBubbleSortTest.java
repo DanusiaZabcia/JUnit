@@ -39,8 +39,8 @@ public class ListBubbleSortTest {
 
 		Collections.sort(controlList);
 		System.out.println(controlList);
-		System.out.println(newlist.bubbleSort());
-		assertThat(newlist.bubbleSort(), IsIterableContainingInOrder.contains(controlList.toArray()));
+		System.out.println(newlist.sortAsc());
+		assertThat(newlist.sortAsc(), IsIterableContainingInOrder.contains(controlList.toArray()));
 
 	}
 	
@@ -71,8 +71,8 @@ public class ListBubbleSortTest {
 
 		Collections.sort(controlList);
 		System.out.println(controlList);
-		System.out.println(newlist.bubbleSort());
-		assertThat(newlist.bubbleSort(), IsIterableContainingInOrder.contains(controlList.toArray()));
+		System.out.println(newlist.sortAsc());
+		assertThat(newlist.sortAsc(), IsIterableContainingInOrder.contains(controlList.toArray()));
 
 	}
 	
@@ -103,8 +103,8 @@ public class ListBubbleSortTest {
 
 		Collections.sort(controlList);
 		System.out.println(controlList);
-		System.out.println(newlist.bubbleSort());
-		assertThat(newlist.bubbleSort(), IsIterableContainingInOrder.contains(controlList.toArray()));
+		System.out.println(newlist.sortAsc());
+		assertThat(newlist.sortAsc(), IsIterableContainingInOrder.contains(controlList.toArray()));
 
 	}
 
@@ -120,8 +120,8 @@ public class ListBubbleSortTest {
 		ListBubbleSort<Integer> newlist = new ListBubbleSort<Integer>(list);
 		Collections.sort(controlList);
 		System.out.println(controlList);
-		System.out.println(newlist.bubbleSort());
-		assertThat(newlist.bubbleSort(), IsIterableContainingInOrder.contains(controlList.toArray()));
+		System.out.println(newlist.sortAsc());
+		assertThat(newlist.sortAsc(), IsIterableContainingInOrder.contains(controlList.toArray()));
 	}
 
 	@Test
@@ -138,8 +138,8 @@ public class ListBubbleSortTest {
 		ListBubbleSort<Integer> newlist = new ListBubbleSort<Integer>(list);
 		Collections.sort(controlList);
 		System.out.println(controlList);
-		System.out.println(newlist.bubbleSort());
-		assertThat(newlist.bubbleSort(), IsIterableContainingInOrder.contains(controlList.toArray()));
+		System.out.println(newlist.sortAsc());
+		assertThat(newlist.sortAsc(), IsIterableContainingInOrder.contains(controlList.toArray()));
 
 	}
 

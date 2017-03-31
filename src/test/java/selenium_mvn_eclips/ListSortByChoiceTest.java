@@ -38,8 +38,8 @@ public class ListSortByChoiceTest {
 
 		Collections.sort(controlList);
 		System.out.println(controlList);
-		System.out.println(newlist.sortByChoice());
-		assertThat(newlist.sortByChoice(), IsIterableContainingInOrder.contains(controlList.toArray()));
+		System.out.println(newlist.sortAsc());
+		assertThat(newlist.sortAsc(), IsIterableContainingInOrder.contains(controlList.toArray()));
 
 	}
 
@@ -55,8 +55,8 @@ public class ListSortByChoiceTest {
 		ListBubbleSort<Integer> newlist = new ListBubbleSort<Integer>(list);
 		Collections.sort(controlList);
 		System.out.println(controlList);
-		System.out.println(newlist.bubbleSort());
-		assertThat(newlist.bubbleSort(), IsIterableContainingInOrder.contains(controlList.toArray()));
+		System.out.println(newlist.sortAsc());
+		assertThat(newlist.sortAsc(), IsIterableContainingInOrder.contains(controlList.toArray()));
 	}
 
 	@Test
@@ -73,8 +73,8 @@ public class ListSortByChoiceTest {
 		ListBubbleSort<Integer> newlist = new ListBubbleSort<Integer>(list);
 		Collections.sort(controlList);
 		System.out.println(controlList);
-		System.out.println(newlist.bubbleSort());
-		assertThat(newlist.bubbleSort(), IsIterableContainingInOrder.contains(controlList.toArray()));
+		System.out.println(newlist.sortAsc());
+		assertThat(newlist.sortAsc(), IsIterableContainingInOrder.contains(controlList.toArray()));
 
 	}
 
@@ -96,9 +96,9 @@ public class ListSortByChoiceTest {
 		
 		Collections.sort(controlList);
 		System.out.println(controlList);
-		System.out.println(newlist.sortByChoiceDecent());
+		System.out.println(newlist.sortDesc());
 
-		assertThat(newlist.sortByChoiceDecent(), IsIterableContainingInOrder.contains(controlList.toArray()));
+		assertThat(newlist.sortDesc(), IsIterableContainingInOrder.contains(controlList.toArray()));
 	}
 
 }
