@@ -10,7 +10,7 @@ import java.util.Random;
 import org.hamcrest.collection.IsIterableContainingInOrder;
 import org.junit.Test;
 
-public class ListSortTest {
+public class ListBubbleSortTest {
 
 	@Test
 
@@ -35,7 +35,7 @@ public class ListSortTest {
 		controlList.add(-3);
 		controlList.add(8);
 
-		ListSort<Integer> newlist = new ListSort<Integer>(list);
+		ListBubbleSort<Integer> newlist = new ListBubbleSort<Integer>(list);
 
 		Collections.sort(controlList);
 		System.out.println(controlList);
@@ -67,7 +67,7 @@ public class ListSortTest {
 		controlList.add(-3);
 		controlList.add(8);
 
-		ListSort<Integer> newlist = new ListSort<Integer>(list);
+		ListBubbleSort<Integer> newlist = new ListBubbleSort<Integer>(list);
 
 		Collections.sort(controlList);
 		System.out.println(controlList);
@@ -99,41 +99,12 @@ public class ListSortTest {
 		controlList.add("-3");
 		controlList.add("8");
 
-		ListSort<String> newlist = new ListSort<String>(list);
+		ListBubbleSort<String> newlist = new ListBubbleSort<String>(list);
 
 		Collections.sort(controlList);
 		System.out.println(controlList);
 		System.out.println(newlist.bubbleSort());
 		assertThat(newlist.bubbleSort(), IsIterableContainingInOrder.contains(controlList.toArray()));
-
-	}
-	@Test
-	public void isSortingChoiceWorksAsSortMethod() {
-
-		ArrayList<Integer> list = new ArrayList<Integer>();
-		ArrayList<Integer> controlList = new ArrayList<Integer>();
-		list.add(234);
-		list.add(4343);
-		list.add(43);
-		list.add(0);
-		list.add(455311);
-		list.add(-3);
-		list.add(8);
-
-		controlList.add(234);
-		controlList.add(4343);
-		controlList.add(43);
-		controlList.add(0);
-		controlList.add(455311);
-		controlList.add(-3);
-		controlList.add(8);
-
-		ListSort<Integer> newlist = new ListSort<Integer>(list);
-
-		Collections.sort(controlList);
-		System.out.println(controlList);
-		System.out.println(newlist.sortByChoice());
-		assertThat(newlist.sortByChoice(), IsIterableContainingInOrder.contains(controlList.toArray()));
 
 	}
 
@@ -146,7 +117,7 @@ public class ListSortTest {
 			list.add(a);
 			controlList.add(a);
 		}
-		ListSort<Integer> newlist = new ListSort<Integer>(list);
+		ListBubbleSort<Integer> newlist = new ListBubbleSort<Integer>(list);
 		Collections.sort(controlList);
 		System.out.println(controlList);
 		System.out.println(newlist.bubbleSort());
@@ -164,7 +135,7 @@ public class ListSortTest {
 			controlList.add(a);
 
 		}
-		ListSort<Integer> newlist = new ListSort<Integer>(list);
+		ListBubbleSort<Integer> newlist = new ListBubbleSort<Integer>(list);
 		Collections.sort(controlList);
 		System.out.println(controlList);
 		System.out.println(newlist.bubbleSort());
@@ -172,27 +143,6 @@ public class ListSortTest {
 
 	}
 
-	@Test(expected = java.lang.AssertionError.class)
-
-	public void isSortingChDecentWorksAsSortMethod() {
-
-		Random mix = new Random();
-		final ArrayList<Integer> list = new ArrayList<Integer>();
-		ArrayList<Integer> controlList = new ArrayList<Integer>();
-		for (int i = 0; i < 30; i++) {
-			Integer a = mix.nextInt(200);
-			list.add(a);
-
-			controlList.add(a);
-		}
-		ListSort<Integer> newlist = new ListSort<Integer>(list);
-
-		
-		Collections.sort(controlList);
-		System.out.println(controlList);
-		System.out.println(newlist.sortByChoiceDecent());
-
-		assertThat(newlist.sortByChoiceDecent(), IsIterableContainingInOrder.contains(controlList.toArray()));
-	}
+	
 
 }
